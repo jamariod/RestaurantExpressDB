@@ -26,4 +26,4 @@ static async getAll() {
     }
   }
 }
-module.exports = ExecutiveList;
+module.exports = RestaurantList;
