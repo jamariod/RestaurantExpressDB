@@ -5,7 +5,6 @@ class RestaurantList {
         this.name = name;
         this.stars = stars;
     }
-}
 
 static async getAll() {
     try {
