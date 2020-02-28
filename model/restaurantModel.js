@@ -1,12 +1,12 @@
 const db = require("./conn");
 
 class RestaurantList {
-    constructor(name, stars) {
-        this.name = name;
-        this.stars = stars;
-    }
+  constructor(name, stars) {
+    this.name = name;
+    this.stars = stars;
+  }
 
-static async getAll() {
+  static async getAll() {
     try {
       const response = await db.any(`SELECT * FROM restaurant;`);
       return response;
@@ -17,7 +17,9 @@ static async getAll() {
   }
   static async getById(id) {
     try {
-      const response = await db.any(`SELECT * FROM restaurant WHERE id = ${id}`);
+      const response = await db.any(
+        `SELECT * FROM restaurant WHERE id = ${id}`
+      );
       return response;
     } catch (error) {
       console.error("ERROR:", error);
